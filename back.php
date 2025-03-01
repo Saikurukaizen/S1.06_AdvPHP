@@ -1,27 +1,26 @@
 <?php
 
-if(!class_exists('SesionHandler')){
     class SesionHandler{
         public function __construct(){
-            session_start();
-             
+            session_start();             
         }
 
-        public function FormHandler(){
-            if(isset($_POST['action']) && !empty($_POST['action'])){
-                if($_POST['action'] == 'form'){
-                    echo 'The form was submitted. ';
-                    print_r($_POST);
-                    if(isset($_POST['nombre']) && $_POST['nombre']){
-                        $_SESSION['session'] = $_POST['nombre'];
-                        echo $_SESSION['session'];
-                        print ' Ejecutando la function '.__FUNCTION__.' en la línea '.__LINE__;
-                    }
-                }           
-            }
+        public function submitForm(){
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                echo 'The form was submitted.' .PHP_EOL;
+                print_r($_POST);
+                if(isset($_POST['nombre']) && $_POST['nombre']){
+                    $_SESSION['session'] = $_POST['nombre'];
+                    echo $_SESSION['session'].PHP_EOL;
+                    echo ' Ejecutando la function '.__FUNCTION__.' en la línea '.__LINE__.PHP_EOL;
+                }
+                else{
+                    echo 'No se ha enviado el formulario'.PHP_EOL;
+                }
+            }          
         }
 
-        public function SessionData(){
+        public function displayData(){
             if(isset($_SESSION['session']) && !empty($_SESSION['session'])){
                 echo ' Sesión iniciada por: '.$_POST['nombre'].'. ';
             } else {
@@ -29,15 +28,14 @@ if(!class_exists('SesionHandler')){
             }
         }
 
-        public function Path(){
+        public function displayFormPath(){
            echo $_SERVER['DOCUMENT_ROOT'].'/form.php';
         }
     }
-}
 
-$sesion = new SesionHandler();
-$sesion->FormHandler();
-$sesion->SessionData();
-$sesion->Path();
+$sesionHandler = new SesionHandler();
+$sesionHandler->submitForm();
+$sesionHandler->displayData();
+$sesionHandler->displayFormPath();
 
 ?>
