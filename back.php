@@ -38,4 +38,28 @@ $sesionHandler->submitForm();
 $sesionHandler->displayData();
 $sesionHandler->displayFormPath();
 
+function Constantes(){
+    echo '<h2>Constantes mágicas</h2>';
+    echo '<p>Estos ejercicios están en el fichero '.__FILE__.'</p>';
+    echo '<p>Estamos trabajando para la función '.__FUNCTION__.'</p>';
+}
+Constantes();
+
+
+
+class SobreescribeHandler{
+
+    public $rewrite;
+
+    public function __construct($rewrite){
+       $this->rewrite = $rewrite;
+    }
+
+    public function __toString(){
+        return sprintf('Instancia intercambiada: %s (línea %d)',$this->rewrite,__LINE__);
+    }
+}
+
+$sobreescribeHandler = new SobreescribeHandler('Hola Mundo!');
+echo $sobreescribeHandler;
 ?>
