@@ -59,4 +59,8 @@ $resource2 = new StackResources("CSS", Topic::CSS, "https://www.w3.org/Style/CSS
 $resource3 = new StackResources("HTML", Topic::HTML, "https://www.w3.org/html/", TypeResource::WebPage);
 $resource4 = new StackResources("Curso completo de SQL", Topic::SQL, "https://www.youtube.com/watch?v=OuJerKzV5T0", TypeResource::Video);
 
+echo $resource1 . PHP_EOL;
+echo $resource2 . PHP_EOL;
+echo $resource3 . PHP_EOL;
+echo $resource4 . PHP_EOL;
 ?>
