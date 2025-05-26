@@ -1,24 +1,24 @@
-# S1.06 - PHP Avanzado
+# S1.06 - Advanced PHP
 
-## 👤 Alumno
-Desarrollado por Marc Sanchez
+## 👤 Student
+Developed by Marc Sanchez
 
-## 📄 Descripción
-Carpetas de los ejercicios del Tema 6 - PHP Avanzado
+## 📄 Description
+Folders of the exercises for Unit 6 - Advanced PHP
 
-## 🎯 Palabras Clave
-- Validación de formulario
-- Filtro de datos
-- Métodos mágicos y constantes mágicas
-- Uso de enums y traits
-- Polimorfismo sin necesidad de herencia
+## 🎯 Keywords
+- Form validation
+- Data filtering
+- Magic methods and magic constants
+- Use of enums and traits
+- Polymorphism without inheritance
 - PHP Coding Standards (PSR-1)
 
-## 🛠️ Tecnologías utilizadas
-- Laragon v.6.0 para el servidor local
+## 🛠️ Technologies Used
+- Laragon v.6.0 for the local server
 - PHP 8.1.10
 - IDE: Visual Studio Code
 - Git & GitHub
 
-## 📋 Requisitos
-- Servidor local tipo Laragon, XAMPP / MAMP / LAMP para la compilación de PHP.
+## 📋 Requirements
+- Local server such as Laragon, XAMPP / MAMP / LAMP for PHP compilation.
